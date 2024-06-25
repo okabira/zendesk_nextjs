@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/remote-app" mode="merge"/>
+    <filter root="/content/remote-app" mode="merge"/>
+    <filter root="/content/dam/remote-app" mode="merge">
+        <exclude pattern="/content/dam/remote-app(/.*)?"/>
+        <include pattern="/content/dam/remote-app/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/remote-app/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/remote-app" mode="merge"/>
+</workspaceFilter>

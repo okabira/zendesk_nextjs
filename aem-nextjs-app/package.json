@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "clean": "rm -rf .next/ node_modules/ package-lock.json",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@adobe/aem-headless-client-js": "^3.1.1",
+    "@adobe/aem-react-editable-components": "^2.1.1",
+    "@adobe/aem-spa-page-model-manager": "^1.4.0",
+    "@xmldom/xmldom": "^0.8.2",
+    "@zendesk/greenhouse": "file:../../../greenhouse/zendesk-greenhouse-1.67.0.tgz",
+    "@zendesk/greenhouse-icons": "file:../../../greenhouse/zendesk-greenhouse-icons-1.67.0.tgz",
+    "@zendeskgarden/react-buttons": "^8.76.2",
+    "@zendeskgarden/react-theming": "^8.76.2",
+    "@zendeskgarden/react-typography": "^8.76.2",
+    "next": "12.3.0",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^6.11.1"
+  },
+  "devDependencies": {
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "sass": "^1.54.8",
+    "tailwindcss": "^3.1.8",
+    "webpack-assets-manifest": "^5.1.0"
+  },
+  "engines": {
+    "node": "^16 || ^18"
+  }
+}

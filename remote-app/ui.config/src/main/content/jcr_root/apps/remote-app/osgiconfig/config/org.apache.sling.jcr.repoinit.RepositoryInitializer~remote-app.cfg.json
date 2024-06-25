@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/remote-app",
+        "create path (nt:unstructured) /content/dam/remote-app/jcr:content",
+        "set properties on /content/dam/remote-app/jcr:content\n  set cq:conf{String} to /conf/remote-app\n  set jcr:title{String} to \"Remote App\"\nend"
+    ]
+}
