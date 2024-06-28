@@ -45,7 +45,7 @@ export default function Home({ model, pagePath, pages }) {
 
 export async function getServerSideProps(context) {
   console.log("Here");
-  const pagePath = `/content/wknd/us/en/magazine`;
+  const pagePath = `/content/wknd/language-masters/en/poc`;
 
 
   const pages = await getPages(pagePath);

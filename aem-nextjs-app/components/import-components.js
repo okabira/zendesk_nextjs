@@ -17,6 +17,7 @@ import { AEMTitle } from './AEMTitle'
 import { AEMImage } from './AEMImage'
 import  { AEMHelloWorld } from './HelloWorld/HelloWorld';
 import { AEMContainer } from './AEWCOntainer';
+import { HeroContainer } from './HeroContainer';
 
 const { NEXT_PUBLIC_AEM_SITE } = process.env;
 
@@ -24,5 +25,9 @@ MapTo(`${NEXT_PUBLIC_AEM_SITE}/components/title`)(AEMTitle)
 MapTo(`${NEXT_PUBLIC_AEM_SITE}/components/text`)(AEMText)
 MapTo(`${NEXT_PUBLIC_AEM_SITE}/components/image`)(AEMImage)
 MapTo(`${NEXT_PUBLIC_AEM_SITE}/components/container`)(AEMContainer);
+MapTo(`wknd/components/hero`)(HeroContainer);
 import './HelloWorld/HelloWorld';
+import './Teaser/Teaser';
+import './Hero/Hero';
+
 

@@ -23,16 +23,34 @@
 const MyContainerEditConfig = {
     emptyLabel: 'Container',
     isEmpty: function(props){
-      return !props.cqItemsOrder || !props.cqItemsOrder.length ===0
+      return false
     }
   }
   
   const MyContainer = (props) => 
   {
-    const MyComponent = (props.layout!=="SIMPLE")?ResponsiveGrid:Container;
-    console.log("AEM Container props", props);
-    return <MyComponent {...props} />;
+
+    const MyComponent = (props.layout!=="SIMPLE")?Container : ResponsiveGrid;
+    console.log('hero props', props);
+    const obj = {":items": {title: props.title}};
+    console.log('title', obj);
+    //props[":items"] = {title: props.title};
+    const copy = {...props};
+    copy[":items"] ={title: props.title};
+    copy[":itemsOrder"] = ["title"];
+    copy["allowedComponents"] = {
+      "components": [],
+      "applicable": false
+      };
+    copy["columnCount"]= 12,
+  copy["columnClassNames"] = {
+      "title": "aem-GridColumn aem-GridColumn--default--12"
+  },
+  copy[":type"] = "wknd/components/hero";
+copy["gridClassNames"]= "aem-Grid aem-Grid--12 aem-Grid--default--12";
+    console.log('copy', copy);
+    return <MyComponent { ...copy} />;
   }
 
   
-  export const AEMContainer = (props) => (<EditableComponent config={MyContainerEditConfig} {...props}><MyContainer customClassName='aemContainer'/></EditableComponent>);
+  export const HeroContainer = (props) => (<EditableComponent config={MyContainerEditConfig} {...props}><MyContainer customClassName='aemContainer hero'/></EditableComponent>);
